@@ -1,0 +1,77 @@
+what is git ? 
+Git is a distributed version control system that allows multiple developers to work on a project 
+simultaneously without interfering with each other's changes. It tracks changes to files and enables
+collaboration, branching, and merging of code.
+
+git work flow 
+
+working directory                   staging area                local repository                remote repository
+    (untracked files)               (tracked files)               (committed files)               (github, gitlab)
+            |                               |                              |                               |
+            |-------------------------------|------------------------------|-------------------------------|
+            |
+    git add <filename>
+                                            |
+                                     git commit -m "message"
+                                                                           |
+                                                                 git push origin <branchname>
+                                                                                                            
+GIT COMMANDS 
+
+git --version
+- To check the installed version of git
+
+git init
+ - Initializec an empty git repository
+
+git status 
+- Gives the information of tha current  state of the git repository
+
+git add <filename>
+ - Adds the file to the staging area & show the tracked and untracked files
+
+git commit -m "give massage" 
+- Commits the changes to the local repository
+
+git log
+- shows the commit history
+
+git log --oneline
+- shows the commit history in a single line
+
+git branch 
+- shows the list of branches in the repository
+
+git branch <branchname>
+ - Creates a new branch 
+
+git checkout <branchname>
+- Switch to the specified branche
+
+git branch -M <new_name>
+- Renames the current branch to the new name
+
+git merge <branchname>
+ - Merges the specified branch to the current branch
+ Note: - while merging branches it give an error or conflict shows there is a difference between the content of 
+ branches in the same line, and denied to merge automatically. For that we need to checkout the conflict, removes
+ the indecators and then commit the changes. 
+
+ git restore --staged <filename>
+- Unstages the file from the staging area
+
+git revert <logID>
+- Reverts the changes made in the last commit 
+
+git clone <repository_link>
+- Clones the remote repository to the local machine 
+
+git push origin main 
+- Pushes the changes to the remote repository
+
+git pull origin main
+- Pulls the changes from the remote repository to the local machine
+
+git remote -v
+- Shows the remote repository link
+
