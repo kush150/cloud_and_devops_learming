@@ -75,3 +75,8 @@ git pull origin main
 git remote -v
 - Shows the remote repository link
 
+github
+- A web-based platform that uses git for version control and provides additional features like issue tracking, project management,
+ and collaboration tools. It allows developers to host their repositories online and collaborate with others easily.
+
+ 
