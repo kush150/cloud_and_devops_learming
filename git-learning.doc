@@ -78,6 +78,9 @@ git config --global user.name <github_user_name>
 git config --global user.email <email_id>
 - Sets the email for git configuration
 
+git remote add origin <link>
+- Adds the remote repository link
+
 git remote -v
 - Shows the remote repository link
 
