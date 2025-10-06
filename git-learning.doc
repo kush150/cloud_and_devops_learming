@@ -1,3 +1,36 @@
+what is VCS?
+VCS (Version Control System) is a software tool that helps manage changes to files and directories over time.
+Evertime you make change, whter it is adding a sentence to a document or altering a line of code, 
+the VCS arecords and sbe the outcome.
+
+Why VCS ?
+1. Collaboration: VCS allows multiple developers to work on the same project simultaneously
+                   without overwriting each other's changes.
+2. History Tracking: VCS keeps a record of all changes made to files, allowing developers to
+                     revert to previous versions if needed.
+3. Branching and Merging: VCS enables developers to create branches for new features or bug fixes,
+                          allowing them to work independently before merging changes back into the main codebase.
+4. Backup and Recovery: VCS provides a backup of the project, ensuring that changes are not lostk & cane be recoverd.
+
+                                          version control system
+                                                      |
+                                                  Repository
+                                                      |
+  ---------------uploade (push)-----------------------|------------------------------Download(Pull)--------|            
+  |              Download (Pull)----------------------|------------------------------Uploade(Push) --------|          
+User1 -----------------|                                                                                  user2    
+  |                                                                                                      |
+  |------------------Working Directory (Untracked files)------------------|----------------Working Directory (Untracked files)------------------|
+                     |                                                  |                                                 |
+                     |------------------Staging Area (Tracked files)-----|-----------------Staging Area (Tracked files)------------------|
+                                        |                                                  |
+                                        |------------------Local Repository (Committed files)------------------|      
+                                                                          |
+                                                                    Remote repository (Github, Gitlab)
+                                                                          |
+                                                                    Other Users
+                                                                    
+      
 what is git ? 
 Git is a distributed version control system that allows multiple developers to work on a project 
 simultaneously without interfering with each other's changes. It tracks changes to files and enables
