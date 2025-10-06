@@ -27,6 +27,21 @@ git init
 git status 
 - Gives the information of tha current  state of the git repository
 
+git config --global user.name <github_user_name>
+- Sets the username for git configuration
+
+git config --global user.email <email_id>
+- Sets the email for git configuration
+
+git remote add origin <link>
+- Adds the remote repository link
+
+git remote -v
+- Shows the remote repository link
+
+git config --list
+- Shows the git configuration list
+
 git add <filename>
  - Adds the file to the staging area & show the tracked and untracked files
 
@@ -67,8 +82,20 @@ git merge <branchname>
 git diff <branch_name>
 - Shows the difference between the current branch and the specified branch to compair commits, branches, files & more.
 
+git reset <file_name>
+- Unstages the file from the staging area but keeps the changes in the working directory
+
+git reset HEAD~1 
+- Unstages the last commit but keeps the changes in the working directory,(for one commit)
+
+git reset <commitId>
+- Unstages the changes made in the specified commit but keeps the changes in the working directory
+
+git reset --hard <commitId>
+- Resets the repository to the specified commit and discards all changes made after that commit
 
  git restore --staged <filename>
+- Unstages the file from the staging area
 
 git revert <logID>
 - Reverts the changes made in the last commit 
@@ -86,22 +113,13 @@ git push -u origin main
 git pull origin main
 - Pulls the changes from the remote repository to the local machine
 
-git config --global user.name <github_user_name>
-- Sets the username for git configuration
-
-git config --global user.email <email_id>
-- Sets the email for git configuration
-
-git remote add origin <link>
-- Adds the remote repository link
-
-git remote -v
-- Shows the remote repository link
-
-git config --list
-- Shows the git configuration list
+git PR (Pull Request)
+- A feature in platforms like GitHub that allows developers to notify team members about changes they've pushed to a 
+branch in a repository. It facilitates code review and discussion before merging changes into the main branch.
 
 github
 - A web-based platform that uses git for version control and provides additional features like issue tracking, project management,
  and collaboration tools. It allows developers to host their repositories online and collaborate with others easily.
+
+ 
 
