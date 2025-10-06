@@ -72,8 +72,17 @@ git push origin main
 git pull origin main
 - Pulls the changes from the remote repository to the local machine
 
+git config --global user.name <github_user_name>
+- Sets the username for git configuration
+
+git config --global user.email <email_id>
+- Sets the email for git configuration
+
 git remote -v
 - Shows the remote repository link
+
+git config --list
+- Shows the git configuration list
 
 github
 - A web-based platform that uses git for version control and provides additional features like issue tracking, project management,
