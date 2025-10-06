@@ -39,6 +39,10 @@ git log
 git log --oneline
 - shows the commit history in a single line
 
+concetp of git branches and creating feature brachnes!
+Branches in Git are used to create separate lines of development within a repository.
+ They allow developers to work on different features,
+
 git branch 
 - shows the list of branches in the repository
 
@@ -50,6 +54,11 @@ git checkout <branchname>
 
 git branch -M <new_name>
 - Renames the current branch to the new name
+
+git branch -d <branch_name>
+- Deletes the specified branch
+
+
 
 git merge <branchname>
  - Merges the specified branch to the current branch
@@ -68,6 +77,10 @@ git clone <repository_link>
 
 git push origin main 
 - Pushes the changes to the remote repository
+
+git push -u origin main
+- Pushes the changes to the remote repository and sets the upstream branch (which means we don't need to origin/main only write
+  "git push" )
 
 git pull origin main
 - Pulls the changes from the remote repository to the local machine
@@ -91,4 +104,3 @@ github
 - A web-based platform that uses git for version control and provides additional features like issue tracking, project management,
  and collaboration tools. It allows developers to host their repositories online and collaborate with others easily.
 
- 
