@@ -29,7 +29,7 @@ User1 -----------------|                                                        
                                                                     Remote repository (Github, Gitlab)
                                                                           |
                                                                     Other Users
-                                                                    
+
       
 what is git ? 
 Git is a distributed version control system that allows multiple developers to work on a project 
@@ -57,9 +57,6 @@ git --version
 git init
  - Initializec an empty git repository
 
-git status 
-- Gives the information of tha current  state of the git repository
-
 git config --global user.name <github_user_name>
 - Sets the username for git configuration
 
@@ -75,6 +72,9 @@ git remote -v
 git config --list
 - Shows the git configuration list
 
+git status 
+- Gives the information of tha current  state of the git repository
+
 git add <filename>
  - Adds the file to the staging area & show the tracked and untracked files
 
@@ -87,9 +87,21 @@ git log
 git log --oneline
 - shows the commit history in a single line
 
+git show <CommitId:File_name>
+- shows the changes made in the specified commit
+
+git checkout <CommitId -- File_Name>
+- Discards the changes made in the working directory and restores the file to the specified commit state (Use "*" in place of "File_Name" for all files) 
+
+git checkout master -- *
+- Discards the changes made in the working directory and restores all the files to the latest commit state of the master branch
+
+
+
 concetp of git branches and creating feature brachnes!
 Branches in Git are used to create separate lines of development within a repository.
- They allow developers to work on different features,
+They allow developers to work on different features branches, bug fixes, or experiments without affecting the main codebase.
+This enables parallel development and makes it easier to manage changes.
 
 git branch 
 - shows the list of branches in the repository
@@ -112,8 +124,34 @@ git merge <branchname>
  branches in the same line, and denied to merge automatically. For that we need to checkout the conflict, removes
  the indecators and then commit the changes. 
 
+git diff --cached
+- Shows the difference between the staging area and the last commit
+
 git diff <branch_name>
 - Shows the difference between the current branch and the specified branch to compair commits, branches, files & more.
+
+If we made anay chnge by mistake and save it 
+case1: - to undo changes, get the lastsuccessful change 
+git restore <. or File_Name>
+- Discards the changes made in the working directory and restores the file to the last committed state
+
+case2: - if we added the changes using "git add" then
+ git restore --staged <filename>
+- Unstages the file from the staging area
+git restore <file_name>
+- Discards the changes made in the working directory and restores the file to the last committed state
+
+case3: - Added change to staging area I(didn't commit) after the added more changes to file
+*to get the staged changes*
+git restore --worktree <File_Name>
+- Restores the file in the working directory to the state in the staging area
+
+CASE4:- HOw about if we did commit a worng files
+git reset --soft <HEAD^ or HEAD_CommitId> (uncommit and keep the change)
+- Unstages the last commit but keeps the changes in the staging area after that commit,(for one commit)
+
+git reset --hard <HEAD^ Or HEAD_CommitId> (uncommit and discard the changes)
+- Resets the repository to the specified commit and discards all changes made after that commit
 
 git reset <file_name>
 - Unstages the file from the staging area but keeps the changes in the working directory
@@ -123,12 +161,6 @@ git reset HEAD~1
 
 git reset <commitId>
 - Unstages the changes made in the specified commit but keeps the changes in the working directory
-
-git reset --hard <commitId>
-- Resets the repository to the specified commit and discards all changes made after that commit
-
- git restore --staged <filename>
-- Unstages the file from the staging area
 
 git revert <logID>
 - Reverts the changes made in the last commit 
